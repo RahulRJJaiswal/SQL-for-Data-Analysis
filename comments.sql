@@ -11,6 +11,12 @@ comment on column customers.email_address
   
 comment on column customers.full_name
   is 'What this customer is called';
+  
+comment on column customers.first_name
+  is 'What this customer is called: First Name';
+  
+comment on column customers.last_name
+  is 'What this customer is called: Last Name';  
 
 comment on table stores
   is 'Physical and virtual locations where people can purchase products';
