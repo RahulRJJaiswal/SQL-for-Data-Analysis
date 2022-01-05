@@ -394,3 +394,9 @@ PROMPT INSERTING into CUSTOMERS
   insert into customers (CUSTOMER_ID,EMAIL_ADDRESS,FULL_NAME) values (392,'adam.miller@internalmail','Adam Miller');
 
 COMMIT;
+
+update CUSTOMERS
+set first_name = substr(FULL_NAME, 1,instr(FULL_NAME, ' ', 1)-1),
+last_name = substr(FULL_NAME, instr(FULL_NAME, ' ', 1));
+
+alter table CUSTOMERS drop column full_name;
